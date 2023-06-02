@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@google/markerclusterer": "^2.0.9"
+  }
+}
