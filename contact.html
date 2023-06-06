@@ -18,17 +18,17 @@
     <script type="text/javascript">
         (function () {
             emailjs.init("AWD8Uxj3cVpTAA7R5");
-            var templateParams = {
-                name: 'Dylan',
-                notes: 'This is the project you want..'
-            };
+            // var templateParams = {
+            //     name: 'Dylan',
+            //     notes: 'This is the project you want..'
+            // };
 
-            emailjs.send('service_hnu0uwq', 'RosieTemplate1', templateParams)
-                .then(function (response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                }, function (error) {
-                    console.log('FAILED...', error);
-                });
+            // emailjs.send('service_hnu0uwq', 'RosieTemplate1', templateParams)
+            //     .then(function (response) {
+            //         console.log('SUCCESS!', response.status, response.text);
+            //     }, function (error) {
+            //         console.log('FAILED...', error);
+            //     });
         })();
     </script>
 </head>
@@ -85,7 +85,7 @@
                 <h5 class="uppercase text-center">Let's work together!</h5>
 
                 <div class="center-form">
-                    <form>
+                    <form onsubmit="return sendMail(this);">
                         <input type="text" name="name" id="fullname" class="form-control" placeholder="Name" required />
                         <input type="email" name="email" id="emailaddress" class="form-control" placeholder="Email"
                             required />
@@ -165,7 +165,7 @@
             </div>
         </div>
     </footer>
-
+    <script src="assets/js/sendEmail.js"></script>
 </body>
 
 </html>
